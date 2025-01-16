@@ -40,7 +40,28 @@ void numberSwapTwo(int x, int y) {
 
 }
 
+int addUpOne(int n){
+    int sum = 0;
+    for (int i=0; i<=n; i++) {
+        sum += i;
+    }
+    return sum;
+}
+
+int addUpTwo(int n){
+    return (n*(n+1)/2);
+}
+
+double calculateMean(int n){
+    double sum = 0;
+    for (int i=0; i<=n; i++){
+        sum += i;
+    }
+    return (sum/n);
+}
+
 int main() {
-    numberSwapOne(5, 4);
-    numberSwapTwo(5, 4);
+    // numberSwapOne(5, 4);
+    // numberSwapTwo(5, 4);
+    std::cout << calculateMean(3) << std::endl;
 }
