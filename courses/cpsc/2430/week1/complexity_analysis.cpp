@@ -11,7 +11,6 @@ void numberSwapOne(int x, int y) {
     x = y;
     y = temp;
 
-
     std::cout << "x: " << x << std::endl;
     std::cout << "y: " << y << std::endl;
 
@@ -19,11 +18,9 @@ void numberSwapOne(int x, int y) {
     auto duration = duration_cast<microseconds>(stop - start);
 
     cout << "Method 1: " << duration.count() << endl;
-
 }
 
 void numberSwapTwo(int x, int y) {
-
     auto start = high_resolution_clock::now(); // start timer
 
     x = x + y;
@@ -33,35 +30,15 @@ void numberSwapTwo(int x, int y) {
     std::cout << "x: " << x << std::endl;
     std::cout << "y: " << y << std::endl;
 
-    auto stop = high_resolution_clock::now(); // end timer
+    auto stop = high_resolution_clock::now();
     auto duration = duration_cast<microseconds>(stop - start);
-    
+
     cout << "Method 2: " << duration.count() << endl;
-
-}
-
-int addUpOne(int n){
-    int sum = 0;
-    for (int i=0; i<=n; i++) {
-        sum += i;
-    }
-    return sum;
-}
-
-int addUpTwo(int n){
-    return (n*(n+1)/2);
-}
-
-double calculateMean(int n){
-    double sum = 0;
-    for (int i=0; i<=n; i++){
-        sum += i;
-    }
-    return (sum/n);
 }
 
 int main() {
-    // numberSwapOne(5, 4);
-    // numberSwapTwo(5, 4);
-    std::cout << calculateMean(3) << std::endl;
+    int a = 5, b = 10;
+    numberSwapOne(a, b);
+    numberSwapTwo(a, b);
+    return 0;
 }
