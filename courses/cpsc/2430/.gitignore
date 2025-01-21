@@ -1,0 +1,11 @@
+# ignore the .vscode file
+.vscode
+
+# ignore the .DS_Store file
+.DS_Store
+
+# ignore the .env file
+.env
+
+# ignore the .env.local file
+.env.local
