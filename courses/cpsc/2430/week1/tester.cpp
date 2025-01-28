@@ -8,3 +8,4 @@ int main() {
     cout << "pass" << endl;
     return 1;
 }
+
