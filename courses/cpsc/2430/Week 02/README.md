@@ -1,11 +1,13 @@
 # Dynamic Triangle Generator
 
 ## Compilation
+
 ```bash
 make
 ```
 
 ## Running the Program
+
 ```bash
 # Basic syntax
 ./lab1_main <height> <unit_width> <start_line> <span> <fill_unit>
@@ -15,6 +17,7 @@ make
 ```
 
 ## CLI Arguments
+
 - `height`: Number of triangle lines
 - `unit_width`: Width multiplier
 - `start_line`: Line to begin filling
@@ -22,11 +25,13 @@ make
 - `fill_unit`: Fill area width
 
 ## Cleanup
+
 ```bash
 make clean
 ```
 
 ## Requirements
+
 - g++ Compiler
 - Make utility
 
