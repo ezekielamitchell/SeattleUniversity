@@ -4,13 +4,13 @@ import urllib.error
 import sys
 from envirophat import weather, leds
 
-WRITE_API = "TJ2D3LRDO4A4BEVO" # Replace your ThingSpeak API key here
-BASE_URL ="https://api.thingspeak.com/update?api_key={}".format(WRITE_API)
+WRITE_API = "TJ2D3LRDO4A4BEVO"  # Replace your ThingSpeak API key here
+BASE_URL = "https://api.thingspeak.com/update?api_key={}".format(WRITE_API)
 
 SensorPrevSec = 0
-SensorInterval = 2 # 2 seconds
+SensorInterval = 2  # 2 seconds
 ThingSpeakPrevSec = 0
-ThingSpeakInterval = 20 # 20 seconds
+ThingSpeakInterval = 20  # 20 seconds
 temperature = weather.temperature()
 
 
