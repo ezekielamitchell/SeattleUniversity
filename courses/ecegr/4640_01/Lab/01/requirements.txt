@@ -1,0 +1,8 @@
+# Python dependencies for ECEGR 4640 Lab 01
+# Install with: pip install -r requirements.txt
+
+# Pimoroni Enviro pHAT library for sensor access
+envirophat
+
+# Python-dotenv for loading environment variables from .env files
+python-dotenv
