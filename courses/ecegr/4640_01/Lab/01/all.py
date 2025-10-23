@@ -5,13 +5,13 @@ import sys
 from envirophat import motion, weather, light, analog
 import math
 
-WRITE_API = 'YZS13Z5HLRLHSLP7'
+WRITE_API = "YZS13Z5HLRLHSLP7"
 BASE_URL = "https://api.thingspeak.com/update?api_key={}".format(WRITE_API)
 
 SensorPrevSec = 0
-SensorInterval = 2 # 2 seconds
+SensorInterval = 2  # 2 seconds
 ThingSpeakPrevSec = 0
-ThingSpeakInterval = 20 # 20 seconds
+ThingSpeakInterval = 20  # 20 seconds
 
 # Initialize variables
 sun = 0
@@ -34,7 +34,7 @@ try:
             thingspeakHttp = BASE_URL + "&field1={:.2f}&field2={:.2f}&field3={:.2f}&field4={:.2f}".format(temperature, sun, math.sqrt(x**2 + y**2 + z**2), logg[0])
             print(thingspeakHttp)
             conn = urlopen(thingspeakHttp)
-            print('Response: {}', format(conn.read()))
+            print("Response: {}".format(conn.read()))
             conn.close()
             sleep(1)
 except KeyboardInterrupt:
