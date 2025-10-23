@@ -2,10 +2,15 @@ from time import time, sleep
 from urllib.request import urlopen
 import urllib.error
 import sys
+import os
 from envirophat import motion, weather, light, analog
 import math
 
-WRITE_API = "YZS13Z5HLRLHSLP7"
+# Load API key from environment variable
+WRITE_API = os.getenv("THINGSPEAK_MOTION_API_KEY")
+if not WRITE_API:
+    raise ValueError("THINGSPEAK_MOTION_API_KEY environment variable is not set. Please create a .env file or set the environment variable.")
+
 BASE_URL = "https://api.thingspeak.com/update?api_key={}".format(WRITE_API)
 
 SensorPrevSec = 0

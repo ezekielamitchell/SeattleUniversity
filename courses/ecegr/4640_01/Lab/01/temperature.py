@@ -2,9 +2,14 @@ from time import time, sleep
 from urllib.request import urlopen
 import urllib.error
 import sys
+import os
 from envirophat import weather, leds
 
-WRITE_API = "TJ2D3LRDO4A4BEVO"  # Replace your ThingSpeak API key here
+# Load API key from environment variable
+WRITE_API = os.getenv("THINGSPEAK_TEMPERATURE_API_KEY")
+if not WRITE_API:
+    raise ValueError("THINGSPEAK_TEMPERATURE_API_KEY environment variable is not set. Please create a .env file or set the environment variable.")
+
 BASE_URL = "https://api.thingspeak.com/update?api_key={}".format(WRITE_API)
 
 SensorPrevSec = 0
