@@ -1,0 +1,9 @@
+# Python dependencies for Seattle University coursework
+
+# Environment variable management
+python-dotenv>=1.0.0
+
+# ECEGR 4640-01 Lab 01 dependencies
+# envirophat - For Raspberry Pi EnviroPHAT sensor library
+# Note: This will only work on Raspberry Pi with EnviroPHAT hardware
+# envirophat>=1.0.0
