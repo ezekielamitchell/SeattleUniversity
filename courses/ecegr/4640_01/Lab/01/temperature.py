@@ -3,12 +3,19 @@ from urllib.request import urlopen
 import urllib.error
 import sys
 import os
+from pathlib import Path
+from dotenv import load_dotenv
 from envirophat import weather, leds
 
+# Load environment variables from repository root .env file
+repo_root = Path(__file__).resolve().parents[5]
+dotenv_path = repo_root / '.env'
+load_dotenv(dotenv_path)
+
 # Load API key from environment variable
-WRITE_API = os.getenv("THINGSPEAK_TEMPERATURE_API_KEY")
+WRITE_API = os.getenv("ECEGR_4640_01_LAB_01_THINGSPEAK_TEMPERATURE_API_KEY")
 if not WRITE_API:
-    raise ValueError("THINGSPEAK_TEMPERATURE_API_KEY environment variable is not set. Please create a .env file or set the environment variable.")
+    raise ValueError("ECEGR_4640_01_LAB_01_THINGSPEAK_TEMPERATURE_API_KEY environment variable is not set. Please create a .env file in the repository root using .env.example as a template.")
 
 BASE_URL = "https://api.thingspeak.com/update?api_key={}".format(WRITE_API)
 
