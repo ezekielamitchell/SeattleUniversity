@@ -1,5 +1,5 @@
 % Store the IoT channel ID and read API key
-channelID = 3108343;
+channelID = ;
 readAPIKey = '';
 
 % Provide the ThingSpeak alerts API key
